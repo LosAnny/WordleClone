@@ -13,6 +13,8 @@
 		94B55A9B28E452C900A018FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B55A9A28E452C900A018FE /* Preview Assets.xcassets */; };
 		94B55AA228E4554D00A018FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B55AA128E4554D00A018FE /* Launch Screen.storyboard */; };
 		94B55AA528E4756F00A018FE /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55AA428E4756F00A018FE /* Color+Extension.swift */; };
+		94B55AA828E4775500A018FE /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55AA728E4775500A018FE /* Guess.swift */; };
+		94B55AAB28E4794100A018FE /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55AAA28E4794100A018FE /* GuessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		94B55A9A28E452C900A018FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94B55AA128E4554D00A018FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		94B55AA428E4756F00A018FE /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		94B55AA728E4775500A018FE /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		94B55AAA28E4794100A018FE /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,11 @@
 		94B55A9228E452C800A018FE /* WordleClone */ = {
 			isa = PBXGroup;
 			children = (
-				94B55AA328E4732E00A018FE /* Extensions */,
 				94B55A9328E452C800A018FE /* WordleCloneApp.swift */,
-				94B55A9528E452C800A018FE /* GameView.swift */,
+				94B55AA628E4772B00A018FE /* Models */,
+				94B55AA928E4790A00A018FE /* Views */,
+				94B55AAC28E47BD400A018FE /* ViewModels */,
+				94B55AA328E4732E00A018FE /* Extensions */,
 				94B55A9728E452C900A018FE /* Assets.xcassets */,
 				94B55AA128E4554D00A018FE /* Launch Screen.storyboard */,
 				94B55A9928E452C900A018FE /* Preview Content */,
@@ -79,6 +85,30 @@
 				94B55AA428E4756F00A018FE /* Color+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94B55AA628E4772B00A018FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94B55AA728E4775500A018FE /* Guess.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94B55AA928E4790A00A018FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94B55A9528E452C800A018FE /* GameView.swift */,
+				94B55AAA28E4794100A018FE /* GuessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94B55AAC28E47BD400A018FE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B55A9628E452C800A018FE /* GameView.swift in Sources */,
+				94B55AAB28E4794100A018FE /* GuessView.swift in Sources */,
+				94B55AA828E4775500A018FE /* Guess.swift in Sources */,
 				94B55AA528E4756F00A018FE /* Color+Extension.swift in Sources */,
 				94B55A9428E452C800A018FE /* WordleCloneApp.swift in Sources */,
 			);
