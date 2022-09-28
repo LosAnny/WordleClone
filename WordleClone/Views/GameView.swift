@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct GameView: View {
+    
+    @EnvironmentObject var dm: WordleDataModel
+    
     var body: some View {
         NavigationView {
-            Text("Hello, world!")
+            VStack(spacing: 3) {
+                ForEach(0...5, id: \.self) { index in
+                    GuessView(guess: $dm.guesses[index])
+                }
+            }
+            .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
                 .padding()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -43,11 +51,13 @@ struct GameView: View {
                     }
                 }
         }
+        .navigationViewStyle(.stack)
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
+            .environmentObject(WordleDataModel())
     }
 }
