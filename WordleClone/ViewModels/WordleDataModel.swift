@@ -40,4 +40,12 @@ class WordleDataModel: ObservableObject {
     func addToCurrentWord(_ letter: String) {
          
     }
+    
+    func enterWord() {
+        
+    }
+    
+    func removeLetterFromCurrrentWord() {
+        
+    }
 }
