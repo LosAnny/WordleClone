@@ -60,5 +60,6 @@ struct Keyboard_Previews: PreviewProvider {
     static var previews: some View {
         Keyboard()
             .environmentObject(WordleDataModel())
+            .scaleEffect(Global.keyboardScale )
     }
 }
