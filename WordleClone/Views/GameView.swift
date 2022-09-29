@@ -13,12 +13,20 @@ struct GameView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 3) {
-                ForEach(0...5, id: \.self) { index in
-                    GuessView(guess: $dm.guesses[index])
+            VStack {
+                Spacer()
+                VStack(spacing: 3) {
+                    ForEach(0...5, id: \.self) { index in
+                        GuessView(guess: $dm.guesses[index])
+                    }
                 }
+                .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
+                Spacer()
+                Keyboard()
+                    .scaleEffect(Global.keyboardScale)
+                    .padding(.top)
+                Spacer()
             }
-            .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
                 .padding()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
