@@ -10,6 +10,7 @@ import SwiftUI
 class WordleDataModel: ObservableObject {
     
     @Published var guesses: [Guess] = []
+    @Published var incorrectAttempts = [Int](repeating: 0, count: 6)
     
     var keyColor = [String: Color]()
     var selectedWord = ""
@@ -61,7 +62,10 @@ class WordleDataModel: ObservableObject {
         if verifyWord() {
             print("Valid word")
         } else {
-            print("Invalid")
+            withAnimation {
+                self.incorrectAttempts[tryIndex] += 1
+            }
+            incorrectAttempts[tryIndex] = 0
         }
     }
     
