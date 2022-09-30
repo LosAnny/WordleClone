@@ -45,4 +45,6 @@ enum Global {
             return CGFloat(1.6)
         }
     }
+    
+    static let commonWords = ["FRAME", "FLOAT", "WIDTH", "BOUND", "BLACK"]
 }
