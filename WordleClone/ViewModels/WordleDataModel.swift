@@ -58,7 +58,11 @@ class WordleDataModel: ObservableObject {
     }
     
     func enterWord() {
-        
+        if verifyWord() {
+            print("Valid word")
+        } else {
+            print("Invalid")
+        }
     }
     
     func removeLetterFromCurrrentWord() {
@@ -69,5 +73,10 @@ class WordleDataModel: ObservableObject {
     func updateRow() {
         let guessWord = currentWord.padding(toLength: 5, withPad: " ", startingAt: 0)
         guesses[tryIndex].word = guessWord
+    }
+    
+    // Обращение к словарю телефона
+    func verifyWord() -> Bool {
+        UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: currentWord)
     }
 }
