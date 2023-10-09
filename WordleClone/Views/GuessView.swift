@@ -15,7 +15,7 @@ struct GuessView: View {
         HStack(spacing: 3) {
             ForEach(0...4, id: \.self) { index in
                 Text(guess.guessLetters[index])
-                    .foregroundColor(.primary)
+                    .foregroundColor(.red)
                     .frame(minWidth: 0,
                            maxWidth: .infinity,
                            minHeight: 0,
